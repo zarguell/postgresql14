@@ -17,6 +17,10 @@ RUN groupadd -g 1001 postgres && \
 
 COPY --from=upstream --chown=root:root --chmod=755 /usr/local/bin/docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
+RUN dnf install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-8-aarch64/pgdg-redhat-repo-latest.noarch.rpm
+
+RUN dnf -qy module disable postgresql
+
 RUN dnf install -y glibc-langpack-en postgresql14-server postgresql14 postgresql14-libs postgresql14-contrib && \
     dnf clean all && \
     rm -rf /var/cache/dnf && \
