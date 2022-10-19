@@ -21,9 +21,11 @@ RUN rpm --import https://ftp.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG-AARCH
 
 RUN dnf install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-8-aarch64/pgdg-redhat-repo-latest.noarch.rpm
 
-RUN dnf -qy module disable postgresql
+## not needed, not in ubi
+# RUN dnf -qy module disable postgresql
 
-RUN dnf install -y glibc-langpack-en postgresql14-server postgresql14 postgresql14-libs postgresql14-contrib && \
+## TODO: find out why gpg key is failing for aarch64 (https://www.postgresql.org/message-id/a118467b-3284-c5c4-0e78-1942da0566b4%40pgmasters.net)
+RUN dnf install -y --nogpgcheck glibc-langpack-en postgresql14-server postgresql14 postgresql14-libs postgresql14-contrib && \
     dnf clean all && \
     rm -rf /var/cache/dnf && \
     rm -rf /usr/share/doc/perl-IO-Socket-SSL/certs/* && \
