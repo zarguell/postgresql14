@@ -1,0 +1,38 @@
+{
+  "assignees": [
+    "@Achsah Abraham"
+  ],
+  "baseBranches": [
+    "development"
+  ],
+"packageRules": [
+    {
+      "datasources": [
+        "docker"
+      ],
+      "packageNames": [
+        "postgres"
+      ],
+      "separateMinorPatch": true,
+      "major": {
+        "enabled": false
+      }
+    }
+  ],
+  "automerge": true,
+  "gitLabAutomerge": true,
+  "regexManagers": [
+    {
+      "fileMatch": [
+        "^hardening_manifest.yaml$"
+      ],
+      "matchStrings": [
+        "org\\.opencontainers\\.image\\.version:\\s+(\\s|\"|')?(?<currentValue>.+?)(\\s|\"|'|$)",
+        "tags:\\s+-(\\s|\"|')+(?<currentValue>.+?)(\\s|\"|'|$)+"
+      ],
+      "depNameTemplate": "postgres",
+      "datasourceTemplate": "docker"
+    }
+  ]
+}
+  

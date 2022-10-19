@@ -1,0 +1,58 @@
+apiVersion: v1
+
+name: opensource/postgres/postgresql
+
+tags:
+- '14.5'
+
+args:
+  BASE_IMAGE: redhat/ubi/ubi8
+  BASE_TAG: '8.6'
+
+labels:
+  org.opencontainers.image.title: postgresql
+  org.opencontainers.image.description: PostgreSQL v14.5 server based on RedHat UBI 8. 
+  org.opencontainers.image.licenses: PostgreSQL
+  org.opencontainers.image.url: https://hub.docker.com/_/postgres
+  org.opencontainers.image.vendor: PostgreSQL Global
+  org.opencontainers.image.version: '14.5'
+  mil.dso.ironbank.image.type: opensource
+  mil.dso.ironbank.product.name: postgres
+
+resources:
+- tag: postgres:14.5
+  url: docker://docker.io/postgres@sha256:742d81929714eac14b8f53e0e78ab3b9e2bee6740d7b39d6bc3b54ebb8398b50
+- filename: RPM-GPG-KEY-PGDG-14
+  url: https://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG-14
+  validation:
+    type: sha256
+    value: 991821e20c4af66314b023db867c7ee8d593f249b9732cbacba7bcd7b25e9604
+- filename: postgresql14-server.rpm
+  url: https://ftp.postgresql.org/pub/repos/yum/14/redhat/rhel-8-x86_64/postgresql14-server-14.5-1PGDG.rhel8.x86_64.rpm
+  validation:
+    type: sha256
+    value: 7d9a35c845f2796bfa474102c9e562fed91bbb82242030f31d52dc6a9e4aecd3
+- filename: postgresql14.rpm
+  url: https://ftp.postgresql.org/pub/repos/yum/14/redhat/rhel-8-x86_64/postgresql14-14.5-1PGDG.rhel8.x86_64.rpm
+  validation:
+    type: sha256
+    value: 2ab7f54c97ed9f2525a0069de64938d24e24b93ed608a0b2412512bd9a48f26c
+- filename: postgresql14-libs.rpm
+  url: https://ftp.postgresql.org/pub/repos/yum/14/redhat/rhel-8-x86_64/postgresql14-libs-14.5-1PGDG.rhel8.x86_64.rpm
+  validation:
+    type: sha256
+    value: 5ddd47106b1d01b80a070c46c37caa5bb55a4a28feb8f6f7b2a503ba88b4c12d
+- filename: postgresql14-contrib.rpm
+  url: https://ftp.postgresql.org/pub/repos/yum/14/redhat/rhel-8-x86_64/postgresql14-contrib-14.5-1PGDG.rhel8.x86_64.rpm
+  validation:
+    type: sha256
+    value: 6fedc223c992d626ab7909f25b6202e46f4f0be358919f534b4eace993fb6e79
+
+maintainers:
+- email: ironbank@dsop.io
+  username: sean.melissari
+  name: Sean Melissari
+  cht_member: true
+- username: achsahabraham
+  name: Achsah Abraham
+  cht_member: true
