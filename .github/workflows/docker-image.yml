@@ -31,3 +31,4 @@ jobs:
           platforms: linux/arm64
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/postgresql14:latest
+          buildkitd-flags: --debug
