@@ -2,7 +2,7 @@ ARG BASE_REGISTRY=docker.io
 ARG BASE_IMAGE=zarguell/ubi8
 ARG BASE_TAG=latest
 
-FROM postgres:14.5 as upstream
+FROM postgres:14.6 as upstream
 
 FROM ${BASE_REGISTRY}/${BASE_IMAGE}:${BASE_TAG}
 
@@ -17,22 +17,21 @@ RUN groupadd -g 1001 postgres && \
 
 COPY --from=upstream --chown=root:root --chmod=755 /usr/local/bin/docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
-RUN rpm --import https://ftp.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG-AARCH64
-
-RUN dnf install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-8-aarch64/pgdg-redhat-repo-latest.noarch.rpm
-
 ## not needed, not in ubi
 # RUN dnf -qy module disable postgresql
 
-## TODO: find out why gpg key is failing for aarch64 (https://www.postgresql.org/message-id/a118467b-3284-c5c4-0e78-1942da0566b4%40pgmasters.net)
-RUN dnf install -y --nogpgcheck glibc-langpack-en postgresql14-server postgresql14 postgresql14-libs postgresql14-contrib && \
+## TODO: test nogpgcheck, pg15 was unsigned
+RUN rpm --import https://ftp.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG-AARCH64-RHEL8 && \
+    dnf install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-8-aarch64/pgdg-redhat-repo-latest.noarch.rpm && \
+    dnf update -y && \
+    dnf install -y --nogpgcheck glibc-langpack-en postgresql14-server postgresql14 postgresql14-libs postgresql14-contrib && \
     dnf clean all && \
     rm -rf /var/cache/dnf && \
     rm -rf /usr/share/doc/perl-IO-Socket-SSL/certs/* && \
     rm -rf /usr/share/doc/perl-IO-Socket-SSL/example && \
     rm -rf /usr/share/doc/perl-Net-SSLeay/examples && \
     chmod +x /usr/local/bin/docker-entrypoint.sh &&\
-    chmod o-w /usr/local/bin/docker-entrypoint.sh &&\
+    chmod o-w /usr/local/bin/docker-entrypoint.sh
 
 RUN mkdir /docker-entrypoint-initdb.d && \
     chown postgres:postgres /docker-entrypoint-initdb.d && \
