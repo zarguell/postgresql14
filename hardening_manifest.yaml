@@ -11,7 +11,7 @@ args:
 
 labels:
   org.opencontainers.image.title: postgresql
-  org.opencontainers.image.description: PostgreSQL v14.5 server based on RedHat UBI 8. 
+  org.opencontainers.image.description: PostgreSQL v14.6 server based on RedHat UBI 8. 
   org.opencontainers.image.licenses: PostgreSQL
   org.opencontainers.image.url: https://hub.docker.com/_/postgres
   org.opencontainers.image.vendor: PostgreSQL Global
@@ -21,38 +21,35 @@ labels:
 
 resources:
 - tag: postgres:14.6
-  url: docker://docker.io/postgres@sha256:c4932976fde9ca0b9a863fc551e4b3db67e707708a71a77c1f50cb846a9b6c2c
+  url: docker://docker.io/postgres@sha256:cfd6203fc331bdf87ddf8c0ae91d9a6a6eacd5f2037c8178b644f1bbc369fafe
 - filename: RPM-GPG-KEY-PGDG-14
   url: https://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG-14
   validation:
     type: sha256
     value: 991821e20c4af66314b023db867c7ee8d593f249b9732cbacba7bcd7b25e9604
 - filename: postgresql14-server.rpm
-  url: https://ftp.postgresql.org/pub/repos/yum/14/redhat/rhel-8-x86_64/postgresql14-server-14.5-1PGDG.rhel8.x86_64.rpm
+  url: https://ftp.postgresql.org/pub/repos/yum/14/redhat/rhel-8-x86_64/postgresql14-server-14.6-1PGDG.rhel8.x86_64.rpm
   validation:
     type: sha256
-    value: 7d9a35c845f2796bfa474102c9e562fed91bbb82242030f31d52dc6a9e4aecd3
+    value: df68c467dd018471ebb08053874ab66bd2ceb900624bc843a324579ccae72050
 - filename: postgresql14.rpm
-  url: https://ftp.postgresql.org/pub/repos/yum/14/redhat/rhel-8-x86_64/postgresql14-14.5-1PGDG.rhel8.x86_64.rpm
+  url: https://ftp.postgresql.org/pub/repos/yum/14/redhat/rhel-8-x86_64/postgresql14-14.6-1PGDG.rhel8.x86_64.rpm
   validation:
     type: sha256
-    value: 2ab7f54c97ed9f2525a0069de64938d24e24b93ed608a0b2412512bd9a48f26c
+    value: af322c6dcb4b0b626e34d85f8ced1ade236b9c2497876cf6181f83bb54eaed07
 - filename: postgresql14-libs.rpm
-  url: https://ftp.postgresql.org/pub/repos/yum/14/redhat/rhel-8-x86_64/postgresql14-libs-14.5-1PGDG.rhel8.x86_64.rpm
+  url: https://ftp.postgresql.org/pub/repos/yum/14/redhat/rhel-8-x86_64/postgresql14-libs-14.6-1PGDG.rhel8.x86_64.rpm
   validation:
     type: sha256
-    value: 5ddd47106b1d01b80a070c46c37caa5bb55a4a28feb8f6f7b2a503ba88b4c12d
+    value: bff307deff554357b55dfe9ca3210965f9ffd4e731b04df8ba9200dcb2b15751
 - filename: postgresql14-contrib.rpm
-  url: https://ftp.postgresql.org/pub/repos/yum/14/redhat/rhel-8-x86_64/postgresql14-contrib-14.5-1PGDG.rhel8.x86_64.rpm
+  url: https://ftp.postgresql.org/pub/repos/yum/14/redhat/rhel-8-x86_64/postgresql14-contrib-14.6-1PGDG.rhel8.x86_64.rpm
   validation:
     type: sha256
-    value: 6fedc223c992d626ab7909f25b6202e46f4f0be358919f534b4eace993fb6e79
+    value: 6b76ac84ad1f20a9d574b05deeeaed38e3f2f77551ac81bba10f7206e060bbd1
 
 maintainers:
 - email: ironbank@dsop.io
-  username: sean.melissari
-  name: Sean Melissari
-  cht_member: true
-- username: achsahabraham
+  username: achsahabraham
   name: Achsah Abraham
   cht_member: true
