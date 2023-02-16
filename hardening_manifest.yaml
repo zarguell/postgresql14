@@ -49,7 +49,11 @@ resources:
     value: 6b76ac84ad1f20a9d574b05deeeaed38e3f2f77551ac81bba10f7206e060bbd1
 
 maintainers:
-- email: ironbank@dsop.io
-  username: achsahabraham
-  name: Achsah Abraham
-  cht_member: true
+  - name: "Jacob Hanafin"
+    username: "hanafin.jacob"
+    email: "jacob.hanafin@sigmadefense.com"
+    cht_member: true
+  - name: "Marcus Montgomery"
+    email: "marcus.montgomery@sigmadefense.com"
+    username: "montgomery.marcus"
+    cht_member: true
