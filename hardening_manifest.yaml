@@ -47,6 +47,11 @@ resources:
   validation:
     type: sha256
     value: 6b76ac84ad1f20a9d574b05deeeaed38e3f2f77551ac81bba10f7206e060bbd1
+- filename: pgaudit.rpm
+  url: https://download.postgresql.org/pub/repos/yum/14/redhat/rhel-8-x86_64/pgaudit16_14-1.6.2-1.rhel8.x86_64.rpm
+  validation:
+    type: sha256
+    value: 80f15a3506d9409c1b200090af8c25dc22cff9389d7d958311ef972b9cb2f82d
 
 maintainers:
   - name: "Jacob Hanafin"
