@@ -1,12 +1,27 @@
-# RabbitMQ
+PostgreSQL Database Management System
+=====================================
 
-RabbitMQ is the most widely deployed open source message broker.
-With tens of thousands of users, RabbitMQ is one of the most popular open source message brokers. From T-Mobile to Runtastic, RabbitMQ is used worldwide at small startups and large enterprises.
+This directory contains the source code distribution of the PostgreSQL
+database management system.
 
-RabbitMQ is lightweight and easy to deploy on premises and in the cloud. It supports multiple messaging protocols. RabbitMQ can be deployed in distributed and federated configurations to meet high-scale, high-availability requirements.
+PostgreSQL is an advanced object-relational database management system
+that supports an extended subset of the SQL standard, including
+transactions, foreign keys, subqueries, triggers, user-defined types
+and functions.  This distribution also contains C language bindings.
 
-RabbitMQ runs on many operating systems and cloud environments, and provides a wide range of developer tools for most popular languages.
+PostgreSQL has many language interfaces, many of which are listed here:
 
-## Documentation
+	https://www.postgresql.org/download/
 
-To learn more about RabbitMQ [go to the complete documentation](https://www.rabbitmq.com/documentation.html).
+See the file INSTALL for instructions on how to build and install
+PostgreSQL.  That file also lists supported operating systems and
+hardware platforms and contains information regarding any other
+software packages that are required to build or run the PostgreSQL
+system.  Copyright and license information can be found in the
+file COPYRIGHT.  A comprehensive documentation set is included in this
+distribution; it can be read as described in the installation
+instructions.
+
+The latest version of this software may be obtained at
+https://www.postgresql.org/download/.  For more information look at our
+web site located at https://www.postgresql.org/.
