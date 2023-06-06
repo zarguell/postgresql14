@@ -7,7 +7,7 @@ tags:
 
 args:
   BASE_IMAGE: redhat/ubi/ubi8
-  BASE_TAG: '8.7'
+  BASE_TAG: '8.8'
 
 labels:
   org.opencontainers.image.title: postgresql
@@ -54,11 +54,12 @@ resources:
     value: 80f15a3506d9409c1b200090af8c25dc22cff9389d7d958311ef972b9cb2f82d
 
 maintainers:
-  - name: "Jacob Hanafin"
-    username: "hanafin.jacob"
-    email: "jacob.hanafin@sigmadefense.com"
+  - name: "Kayvan Montakhab"
+    username: "kaymonty"
+    email: "kmontakhab@vivsoft.io"
     cht_member: true
-  - name: "Marcus Montgomery"
-    email: "marcus.montgomery@sigmadefense.com"
-    username: "montgomery.marcus"
+  - name: "Colton Freeman"
+    email: "ironbank@dsop.io"
+    username: "colton.freeman"
     cht_member: true
+
