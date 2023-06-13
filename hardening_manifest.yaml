@@ -28,25 +28,25 @@ resources:
     type: sha256
     value: 991821e20c4af66314b023db867c7ee8d593f249b9732cbacba7bcd7b25e9604
 - filename: postgresql14-server.rpm
-  url: https://ftp.postgresql.org/pub/repos/yum/14/redhat/rhel-8-x86_64/postgresql14-server-14.6-1PGDG.rhel8.x86_64.rpm
+  url: https://ftp.postgresql.org/pub/repos/yum/14/redhat/rhel-8-x86_64/postgresql14-server-14.8-1PGDG.rhel8.x86_64.rpm
   validation:
     type: sha256
-    value: df68c467dd018471ebb08053874ab66bd2ceb900624bc843a324579ccae72050
+    value: 5bce7abc0260bf2648640a5143e2a87285b1d1c788fa49b175596d658edb8428
 - filename: postgresql14.rpm
-  url: https://ftp.postgresql.org/pub/repos/yum/14/redhat/rhel-8-x86_64/postgresql14-14.6-1PGDG.rhel8.x86_64.rpm
+  url: https://ftp.postgresql.org/pub/repos/yum/14/redhat/rhel-8-x86_64/postgresql14-14.8-1PGDG.rhel8.x86_64.rpm
   validation:
     type: sha256
-    value: af322c6dcb4b0b626e34d85f8ced1ade236b9c2497876cf6181f83bb54eaed07
+    value: 3480938e1ba6f9de5f05399bdd6511c33485bf286c9b1d1ddca8c4daab8d39a6
 - filename: postgresql14-libs.rpm
-  url: https://ftp.postgresql.org/pub/repos/yum/14/redhat/rhel-8-x86_64/postgresql14-libs-14.6-1PGDG.rhel8.x86_64.rpm
+  url: https://ftp.postgresql.org/pub/repos/yum/14/redhat/rhel-8-x86_64/postgresql14-libs-14.8-1PGDG.rhel8.x86_64.rpm
   validation:
     type: sha256
-    value: bff307deff554357b55dfe9ca3210965f9ffd4e731b04df8ba9200dcb2b15751
+    value: 31438103affb5b48edd607d628deed002293a506bbc6cf9bfb215a089647f17e
 - filename: postgresql14-contrib.rpm
-  url: https://ftp.postgresql.org/pub/repos/yum/14/redhat/rhel-8-x86_64/postgresql14-contrib-14.6-1PGDG.rhel8.x86_64.rpm
+  url: https://ftp.postgresql.org/pub/repos/yum/14/redhat/rhel-8-x86_64/postgresql14-contrib-14.8-1PGDG.rhel8.x86_64.rpm
   validation:
     type: sha256
-    value: 6b76ac84ad1f20a9d574b05deeeaed38e3f2f77551ac81bba10f7206e060bbd1
+    value: cf5a8d99265c0bde6e413bc24f53692c85b4bc4812417951e6a28630ccf2a44e
 - filename: pgaudit.rpm
   url: https://download.postgresql.org/pub/repos/yum/14/redhat/rhel-8-x86_64/pgaudit16_14-1.6.2-1.rhel8.x86_64.rpm
   validation:
