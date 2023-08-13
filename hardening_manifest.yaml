@@ -3,7 +3,7 @@ apiVersion: v1
 name: opensource/postgres/postgresql
 
 tags:
-- '14.8'
+- '14.9'
 
 args:
   BASE_IMAGE: redhat/ubi/ubi8
@@ -15,13 +15,13 @@ labels:
   org.opencontainers.image.licenses: PostgreSQL
   org.opencontainers.image.url: https://hub.docker.com/_/postgres
   org.opencontainers.image.vendor: PostgreSQL Global
-  org.opencontainers.image.version: '14.8'
+  org.opencontainers.image.version: '14.9'
   mil.dso.ironbank.image.type: opensource
   mil.dso.ironbank.product.name: postgres
 
 resources:
-- tag: postgres:14.8
-  url: docker://docker.io/postgres@sha256:eecfb2ab484dadaae790866c9e5090a67deeee76417f072786569bea03f53e3f
+- tag: postgres:14.9
+  url: docker://docker.io/postgres@sha256:54fbbe269b6e726107a377b78dd6c520bc8d38b163fb8cb2e7912d26be75fc76
 - filename: RPM-GPG-KEY-PGDG-14
   url: https://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG-14
   validation:
