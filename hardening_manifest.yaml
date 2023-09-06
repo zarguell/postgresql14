@@ -4,10 +4,11 @@ name: opensource/postgres/postgresql
 
 tags:
 - '14.9'
+- '14'
 
 args:
-  BASE_IMAGE: redhat/ubi/ubi8
-  BASE_TAG: '8.8'
+  BASE_IMAGE: redhat/ubi/ubi9
+  BASE_TAG: '9.2'
 
 labels:
   org.opencontainers.image.title: postgresql
@@ -28,30 +29,30 @@ resources:
     type: sha256
     value: 991821e20c4af66314b023db867c7ee8d593f249b9732cbacba7bcd7b25e9604
 - filename: postgresql14-server.rpm
-  url: https://ftp.postgresql.org/pub/repos/yum/14/redhat/rhel-8-x86_64/postgresql14-server-14.8-1PGDG.rhel8.x86_64.rpm
+  url: https://ftp.postgresql.org/pub/repos/yum/14/redhat/rhel-9-x86_64/postgresql14-server-14.9-2PGDG.rhel9.x86_64.rpm
   validation:
     type: sha256
-    value: 5bce7abc0260bf2648640a5143e2a87285b1d1c788fa49b175596d658edb8428
+    value: 3fb860b6babba61a1228ecc50aa1fe415ece3cd7d1d7036e39b10d0fbda71a0f
 - filename: postgresql14.rpm
-  url: https://ftp.postgresql.org/pub/repos/yum/14/redhat/rhel-8-x86_64/postgresql14-14.8-1PGDG.rhel8.x86_64.rpm
+  url: https://ftp.postgresql.org/pub/repos/yum/14/redhat/rhel-9-x86_64/postgresql14-14.9-2PGDG.rhel9.x86_64.rpm
   validation:
     type: sha256
-    value: 3480938e1ba6f9de5f05399bdd6511c33485bf286c9b1d1ddca8c4daab8d39a6
+    value: 211322122db6194252404558b393bc88da807d234b178c347ccaf9371cd0c194
 - filename: postgresql14-libs.rpm
-  url: https://ftp.postgresql.org/pub/repos/yum/14/redhat/rhel-8-x86_64/postgresql14-libs-14.8-1PGDG.rhel8.x86_64.rpm
+  url: https://ftp.postgresql.org/pub/repos/yum/14/redhat/rhel-9-x86_64/postgresql14-libs-14.9-2PGDG.rhel9.x86_64.rpm
   validation:
     type: sha256
-    value: 31438103affb5b48edd607d628deed002293a506bbc6cf9bfb215a089647f17e
+    value: bcb4374f7b4c14c7f4f13fc2ee39518d85dfb7ca8112d740931b86ca088b3679
 - filename: postgresql14-contrib.rpm
-  url: https://ftp.postgresql.org/pub/repos/yum/14/redhat/rhel-8-x86_64/postgresql14-contrib-14.8-1PGDG.rhel8.x86_64.rpm
+  url: https://ftp.postgresql.org/pub/repos/yum/14/redhat/rhel-9-x86_64/postgresql14-contrib-14.9-2PGDG.rhel9.x86_64.rpm
   validation:
     type: sha256
-    value: cf5a8d99265c0bde6e413bc24f53692c85b4bc4812417951e6a28630ccf2a44e
+    value: 11185a381bc0603d88115036c2333802f3b7bdafa3b39354ab990ed75223209e
 - filename: pgaudit.rpm
-  url: https://download.postgresql.org/pub/repos/yum/14/redhat/rhel-8-x86_64/pgaudit16_14-1.6.2-1.rhel8.x86_64.rpm
+  url: https://download.postgresql.org/pub/repos/yum/14/redhat/rhel-9-x86_64/pgaudit16_14-1.6.2-1.rhel9.x86_64.rpm
   validation:
     type: sha256
-    value: 80f15a3506d9409c1b200090af8c25dc22cff9389d7d958311ef972b9cb2f82d
+    value: 64d6dc38bfd47db797656d9594010768f30efdca9e655d81ea33a1ca639c1b9d
 
 maintainers:
   - name: "Kayvan Montakhab"
