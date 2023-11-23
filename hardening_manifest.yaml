@@ -22,7 +22,7 @@ labels:
 
 resources:
 - tag: postgres:14.10
-  url: docker://docker.io/postgres@sha256:8fed6d16140bc52790051c65455c0dade1801a3165549c3b48ead0bc45692da2
+  url: docker://docker.io/postgres@sha256:bc7e52df5ae9f4cf5ef2f4227c911c6a8b89e3bd3e2384d29d3f54f0e4d7594b
 - filename: RPM-GPG-KEY-PGDG-14
   url: https://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG-14
   validation:
