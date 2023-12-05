@@ -22,32 +22,32 @@ labels:
 
 resources:
 - tag: postgres:14.10
-  url: docker://docker.io/postgres@sha256:2cc52135f21efd56a27258fedbbc34c2699b4e28454dc0a7609a1d8adab94f76
+  url: docker://docker.io/postgres@sha256:3ff84dc68ace1638698490d729a3c99b6c7781abc8e23dabc611eac44060436d
 - filename: RPM-GPG-KEY-PGDG-14
   url: https://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG-14
   validation:
     type: sha256
     value: 991821e20c4af66314b023db867c7ee8d593f249b9732cbacba7bcd7b25e9604
 - filename: postgresql14-server.rpm
-  url: https://ftp.postgresql.org/pub/repos/yum/14/redhat/rhel-9-x86_64/postgresql14-server-14.9-2PGDG.rhel9.x86_64.rpm
+  url: https://ftp.postgresql.org/pub/repos/yum/14/redhat/rhel-9-x86_64/postgresql14-server-14.10-1PGDG.rhel9.x86_64.rpm
   validation:
     type: sha256
-    value: 3fb860b6babba61a1228ecc50aa1fe415ece3cd7d1d7036e39b10d0fbda71a0f
+    value: 77edcf4ea57d60647a683a74f1106c92c5c9542cd35ef8f6f3684e91fa9c68a9
 - filename: postgresql14.rpm
-  url: https://ftp.postgresql.org/pub/repos/yum/14/redhat/rhel-9-x86_64/postgresql14-14.9-2PGDG.rhel9.x86_64.rpm
+  url: https://ftp.postgresql.org/pub/repos/yum/14/redhat/rhel-9-x86_64/postgresql14-14.10-1PGDG.rhel9.x86_64.rpm
   validation:
     type: sha256
-    value: 211322122db6194252404558b393bc88da807d234b178c347ccaf9371cd0c194
+    value: 5f4a68448b4c080b052fee00323b74d2c55819f56b717a1ed6e592d496762a35
 - filename: postgresql14-libs.rpm
-  url: https://ftp.postgresql.org/pub/repos/yum/14/redhat/rhel-9-x86_64/postgresql14-libs-14.9-2PGDG.rhel9.x86_64.rpm
+  url: https://ftp.postgresql.org/pub/repos/yum/14/redhat/rhel-9-x86_64/postgresql14-libs-14.10-1PGDG.rhel9.x86_64.rpm
   validation:
     type: sha256
-    value: bcb4374f7b4c14c7f4f13fc2ee39518d85dfb7ca8112d740931b86ca088b3679
+    value: d249d9df579963166b8c95c5b2a69948f846988f7a52d860375e679ad48732f6
 - filename: postgresql14-contrib.rpm
-  url: https://ftp.postgresql.org/pub/repos/yum/14/redhat/rhel-9-x86_64/postgresql14-contrib-14.9-2PGDG.rhel9.x86_64.rpm
+  url: https://ftp.postgresql.org/pub/repos/yum/14/redhat/rhel-9-x86_64/postgresql14-contrib-14.10-1PGDG.rhel9.x86_64.rpm
   validation:
     type: sha256
-    value: 11185a381bc0603d88115036c2333802f3b7bdafa3b39354ab990ed75223209e
+    value: f096bd2f1f2e7a078c38a7c1b35e4adb6b423ced175957bc01cfc719810b1843
 - filename: pgaudit.rpm
   url: https://download.postgresql.org/pub/repos/yum/14/redhat/rhel-9-x86_64/pgaudit16_14-1.6.2-1.rhel9.x86_64.rpm
   validation:
