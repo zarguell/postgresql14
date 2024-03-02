@@ -22,7 +22,7 @@ labels:
 
 resources:
 - tag: postgres:14.11
-  url: docker://docker.io/postgres@sha256:fc7a8a582b74d962bfd670a2c820d4921ad0ce6929526015014cb574d8424ded
+  url: docker://docker.io/postgres@sha256:8420d1b03da7890f7cd21c711e520ca260cf35336aa0a794c1db6e9462dd3db1
 - filename: postgresql14-server.rpm
   url: https://download.postgresql.org/pub/repos/yum/14/redhat/rhel-9-x86_64/postgresql14-server-14.10-1PGDG.rhel9.x86_64.rpm
   validation:
